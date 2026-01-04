@@ -87,11 +87,34 @@ h2 {
     text-decoration: none;
     font-weight: bold;
 }
+.project {
+    transition: all 0.35s ease;
+    cursor: pointer;
+}
+
+.project:hover {
+    transform: scale(1.04);
+    background: rgba(106, 0, 255, 0.25);
+    box-shadow: 0 0 25px rgba(106,0,255,0.6);
+}
 
 footer {
     text-align: center;
     opacity: 0.8;
 }
+.project .desc {
+    display: none;
+    margin-top: 8px;
+    opacity: 0.9;
+}
+
+.project.open .desc {
+    display: block;
+}
+.project.open .short {
+    display: none;
+}
+
 </style>
 </head>
 
@@ -166,10 +189,23 @@ footer {
 <section>
     <h2>Projects</h2>
 
-    <div class="project">
-        <h3>Smart Business Management System</h3>
-        <a href="https://github.com/kingmaker2035-png/smart-business-management-system-python" target="_blank">GitHub</a>
-    </div>
+    <div class="project" onclick="toggleDesc(this)">
+    <h3>Smart Business Management System</h3>
+
+    <p class="short">
+        Python-based business management system.
+    </p>
+
+    <p class="desc">
+        Handles products, customers, orders, inventory and revenue tracking
+        using real-world business logic.
+    </p>
+
+    <a href="https://github.com/kingmaker2035-png/smart-business-management-system-python" target="_blank" onclick="event.stopPropagation()">
+        View on GitHub
+    </a>
+</div>
+
 
     <div class="project">
         <h3>Student Result & Grade Calculator</h3>
@@ -228,10 +264,28 @@ footer {
     © 2025 Anurag Kumar | Universe Portfolio
 </footer>
 
+<script>
+function toggleDesc(card) {
+    // pehle sab projects band karo
+    document.querySelectorAll('.project').forEach(p => {
+        if (p !== card) {
+            p.classList.remove('open');
+        }
+    });
+
+    // clicked project toggle karo
+    card.classList.toggle('open');
+}
+</script>
+
+
 </body>
 </html>
 
+
+
    
+
 
 
 
