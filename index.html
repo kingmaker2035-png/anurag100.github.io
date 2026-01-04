@@ -1,225 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anurag Kumar | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anurag Kumar | Portfolio</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            color: #222;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-        header {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
+/* VIDEO BACKGROUND */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 36px;
-        }
+/* DARK OVERLAY */
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 0, 20, 0.85);
+    z-index: -1;
+}
 
-        header p {
-            font-size: 18px;
-            margin-top: 10px;
-            opacity: 0.85;
-        }
+/* CONTENT */
+header, section, footer {
+    max-width: 900px;
+    margin: 30px auto;
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 12px;
+    color: white;
+    backdrop-filter: blur(10px);
+}
 
-        section {
-            max-width: 900px;
-            margin: 30px auto;
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+header {
+    text-align: center;
+}
 
-        h2 {
-            margin-top: 0;
-            border-left: 5px solid #111;
-            padding-left: 10px;
-        }
+header h1 {
+    font-size: 38px;
+    color: #d9b3ff;
+}
 
-        .skills span {
-            display: inline-block;
-            background: #111;
-            color: white;
-            padding: 6px 14px;
-            margin: 6px;
-            border-radius: 20px;
-            font-size: 14px;
-        }
+header p {
+    font-size: 18px;
+    opacity: 0.9;
+}
 
-        .project {
-            background: #fafafa;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-left: 4px solid #111;
-            border-radius: 8px;
-        }
+h2 {
+    border-left: 5px solid #b980ff;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
 
-        .project a {
-            text-decoration: none;
-            font-weight: bold;
-            color: #111;
-        }
+.skills span {
+    display: inline-block;
+    background: #6a00ff;
+    color: white;
+    padding: 6px 14px;
+    margin: 6px;
+    border-radius: 20px;
+    font-size: 14px;
+}
 
-        footer {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-    </style>
+.project {
+    background: rgba(0,0,0,0.3);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid #b980ff;
+    border-radius: 8px;
+}
+
+.project a {
+    color: #d9b3ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    opacity: 0.8;
+}
+</style>
 </head>
 
 <body>
 
+<!-- BACKGROUND VIDEO -->
+<video autoplay muted loop playsinline id="bg-video">
+    <source src="universe.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
 <header>
     <h1>Anurag Kumar</h1>
-    <p>Python Developer | Data Science Learner | AI Enthusiast</p>
+    <p>Python • Data Science • AI • USA Dream 🇺🇸</p>
 </header>
 
-<section id="about">
+<section>
     <h2>About Me</h2>
     <p>
-        Hi! I’m Anurag, a passionate learner focused on Python, Data Science and
-        building real-world projects.  
-        I believe in consistency, practice and learning by doing.
+        I am a passionate learner focused on Python, Data Science and AI,
+        building real-world projects with consistency and discipline.
     </p>
 </section>
 
-<section id="skills">
+<section>
     <h2>Skills</h2>
     <div class="skills">
         <span>Python</span>
-        <span>Data Structures</span>
         <span>Pandas</span>
-        <span>Numpy</span>
-        <span>Matplotlib</span>
-        <span>Machine Learning</span>
+        <span>NumPy</span>
         <span>SQL</span>
-        <span>HTML</span>
-        <span>CSS</span>
+        <span>Machine Learning</span>
         <span>Git & GitHub</span>
     </div>
 </section>
 
-<section id="projects">
+<section>
     <h2>Projects</h2>
 
     <div class="project">
-        <h3>Smart Grocery Inventory Manager</h3>
-        <p>Inventory management system using Dictionary + Set with CRUD operations.</p>
-        <a href="https://github.com/kingmaker2035-png/Smart-Grocery-Inventory-Manager-Dict-Set-Project-" target="_blank">
-            View on GitHub
-        </a>
+        <h3>Smart Business Management System</h3>
+        <a href="https://github.com/kingmaker2035-png/smart-business-management-system-python" target="_blank">GitHub</a>
     </div>
 
     <div class="project">
-        <h3>Smart Hotel Room Booking System</h3>
-        <p>Menu-driven Python project using Dictionary + Set for hotel room management.</p>
-        <a href="https://github.com/kingmaker2035-png/SMART-HOTEL-ROOM-BOOKING-SYSTEM-Dict-Set-Project-" target="_blank">
-            View on GitHub
-        </a>
+        <h3>Student Result & Grade Calculator</h3>
+        <a href="https://github.com/kingmaker2035-png/Student-Result-Grade-Calculator-Python-" target="_blank">GitHub</a>
     </div>
 
     <div class="project">
-        <h3>Advanced ATM Withdrawal Simulator</h3>
-        <p>ATM simulator using loops, break, continue, range, sum and factorial.</p>
-        <a href="https://github.com/kingmaker2035-png/ADVANCED-ATM-WITHDRAWAL-SIMULATOR" target="_blank">GitHub Link</a>
+        <h3>Student Marks Manager</h3>
+        <a href="https://github.com/kingmaker2035-png/student-marks-manager" target="_blank">GitHub</a>
     </div>
+
 </section>
 
-<section id="contact">
+<section>
     <h2>Contact</h2>
-
-    <p>Email:
-        <a href="mailto:anurag123@gmail.com">anurag123@gmail.com</a>
-    </p>
-
-    <p>LinkedIn:
-        <a href="https://www.linkedin.com/in/anuragkumar/" target="_blank">
-            www.linkedin.com/in/anuragkumar/
-        </a>
-    </p>
-
-    <p>GitHub:
-        <a href="https://github.com/kingmaker2035-png" target="_blank">
-            github.com/kingmaker2035-png
-        </a>
-    </p>
+    <p>Email: anurag123@gmail.com</p>
+    <p>GitHub: kingmaker2035-png</p>
+    <p>LinkedIn: Anurag Kumar</p>
 </section>
 
 <footer>
-    © 2025 Anurag Kumar | Portfolio
+    © 2025 Anurag Kumar | Universe Portfolio
 </footer>
 
 </body>
 </html>
 
-<div class="card">
-    <h3>Smart Business Management System (Python)</h3>
-    <p>
-        A Python console-based application for managing products, customers,
-        orders, inventory, and business revenue using real-world logic.
-    </p>
-
-    <ul>
-        <li>Product & Customer Management</li>
-        <li>Order System with Auto Order ID</li>
-        <li>Stock Validation</li>
-        <li>Business Report & Revenue Tracking</li>
-    </ul>
-
-    <p><strong>Tech:</strong> Python, Data Structures, Logic Building</p>
-
-    <a class="btn"
-       href="https://github.com/kingmaker2035-png/smart-business-management-system-python"
-       target="_blank">
-        View Project on GitHub
-    </a>
-</div>
-
-    <div class="project">
-        <h3>Student Marks Manager</h3>
-        <p>
-            Python-based project to manage student marks using logical conditions,
-            lists, and data handling with clean output.
-        </p>
-        <a href="https://github.com/kingmaker2035-png/student-marks-manager" target="_blank">
-            View on GitHub
-        </a>
-    </div>
-
-    <div class="project">
-        <h3>Student Result & Grade Calculator</h3>
-        <p>
-            Console-based Python application that calculates total marks,
-            percentage, pass/fail status, and grades.
-        </p>
-        <a href="https://github.com/kingmaker2035-png/Student-Result-Grade-Calculator-Python-" target="_blank">
-            View on GitHub
-        </a>
-    </div>
-
-    <div class="project">
-        <h3>Student Marks Calculator</h3>
-        <p>
-            Beginner-friendly Python project for calculating and displaying
-            student marks using variables, input/output, and conditions.
-        </p>
-        <a href="https://github.com/kingmaker2035-png/student-marks-calculator" target="_blank">
-            View on GitHub
-        </a>
-    </div>
 
 
 
