@@ -1,0 +1,304 @@
+:root {
+  --primary: #2563eb;
+  --secondary: #facc15;
+  --dark: #111;
+  --light-bg: #f8f9fb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 50px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.nav-links a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+}
+
+.hero::after {
+  background: linear-gradient(
+    to right,
+    rgba(37,99,235,0.35),
+    rgba(0,0,0,0.25)
+  );
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+.btn {
+  padding: 12px 28px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.btn.dark {
+  background: #111;
+}
+
+.btn.outline {
+  background: transparent;
+  color: #2563eb;
+  border: 1px solid #2563eb;
+}
+
+/* SECTIONS */
+.section {
+  padding: 100px 80px;
+}
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: var(--dark);
+}
+
+.section.light h2 {
+  color: var(--primary);
+}
+
+.section.light {
+  background: #f8f9fb;
+}
+
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.section-text {
+  max-width: 700px;
+  font-size: 18px;
+}
+
+/* CARDS */
+.card {
+  border-top: 4px solid var(--primary);
+}
+
+.card:hover {
+  border-top-color: var(--secondary);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* POINTS */
+.points {
+  list-style: none;
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.points li {
+  margin-bottom: 15px;
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    #1e40af
+  );
+}
+
+.cta {
+  padding: 100px 80px;
+  background: #2563eb;
+  color: white;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+/* CONTACT */
+.contact-buttons {
+  margin-top: 30px;
+}
+
+.contact-buttons a {
+  margin-right: 15px;
+}
+
+/* FOOTER */
+footer {
+  padding: 30px;
+  text-align: center;
+  background: #111;
+  color: #aaa;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .section {
+    padding: 70px 30px;
+  }
+}
+iframe {
+  border-radius: 12px;
+}
+/* PRICE LIST */
+.price-row span:first-child {
+  color: #333;
+}
+
+.price-row span:last-child {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.price-table {
+  max-width: 600px;
+  margin-top: 40px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 25px;
+  font-size: 18px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.price-row:last-child {
+  border-bottom: none;
+}
+
+.price-row span:last-child {
+  font-weight: 600;
+  color: #2563eb;
+}
+/* IMAGE SHOWCASE SECTION */
+.image-showcase {
+  display: flex;
+  align-items: center;
+  padding: 100px 80px;
+  gap: 60px;
+}
+
+.image-content {
+  flex: 1;
+}
+
+.image-content h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.image-content p {
+  font-size: 18px;
+  color: #444;
+}
+
+.image-box {
+  flex: 1;
+  height: 360px;
+  border-radius: 14px;
+  background: url("https://images.unsplash.com/photo-1556761175-5973dc0f32e7")
+    center/cover no-repeat;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+@media (max-width: 768px) {
+  .image-showcase {
+    flex-direction: column;
+    padding: 70px 30px;
+  }
+
+  .image-box {
+    width: 100%;
+  }
+}
