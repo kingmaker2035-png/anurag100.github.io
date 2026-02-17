@@ -175,3 +175,28 @@ body {
   font-size: 14px;
   opacity: 0.9;
 }
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    pointer-events: none;   /* IMPORTANT */
+}
+
+/* Hide browser media controls completely */
+#bg-video::-webkit-media-controls {
+    display: none !important;
+}
+#bg-video::-webkit-media-controls-panel {
+    display: none !important;
+}
+#bg-video::-webkit-media-controls-play-button {
+    display: none !important;
+}
+#bg-video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+}
