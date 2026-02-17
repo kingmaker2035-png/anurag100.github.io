@@ -200,3 +200,47 @@ body {
 #bg-video::-webkit-media-controls-start-playback-button {
     display: none !important;
 }
+.contact-premium {
+    text-align: center;
+    padding: 120px 20px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+}
+
+.contact-premium h2 {
+    font-size: 42px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.contact-box {
+    background: rgba(255,255,255,0.08);
+    padding: 40px;
+    border-radius: 16px;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 0 30px rgba(0, 102, 255, 0.3);
+}
+
+.contact-box p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+.contact-links a {
+    display: inline-block;
+    margin: 10px 15px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    transition: 0.3s ease;
+}
+
+.contact-links a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(37,99,235,0.6);
+}
+
